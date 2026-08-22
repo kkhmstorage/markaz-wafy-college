@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KKHM Islamic & Arts College</title>
+    <meta name="description" content="Official website of KKHM Islamic & Arts College, Athavanadu, Kerala. Affiliation No: 01 under CIC.">
+    
+    <!-- Google Fonts: Playfair Display for headings, Inter for body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#1a2942',
+                            900: '#0b162c',
+                        },
+                        gold: {
+                            400: '#facc15',
+                            500: '#eab308',
+                            600: '#ca8a04',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Marquee Animation */
+        .marquee-container {
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .marquee-content {
+            display: inline-block;
+            animation: marquee 20s linear infinite;
+        }
+        .marquee-content:hover {
+            animation-play-state: paused;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        /* Hero Image Overlay */
+        .hero-overlay {
+            background: linear-gradient(to right, rgba(11, 22, 44, 0.9), rgba(11, 22, 44, 0.6));
+        }
+        
+        /* Card Hover Effects */
+        .course-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-gray-50 flex flex-col min-h-screen">
+
+    <!-- Header / Navbar -->
+    <header class="bg-navy-900 text-white sticky top-0 z-50 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo & College Name -->
+                <div class="flex items-center gap-3">
+                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-navy-900 font-bold text-xl border-2 border-gold-500 shadow-sm">
+                        <!-- Placeholder for Logo -->
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <div>
+                        <h1 class="font-serif font-bold text-lg sm:text-xl md:text-2xl tracking-wide leading-tight">KKHM ISLAMIC & ARTS COLLEGE</h1>
+                        <p class="text-gold-400 text-xs sm:text-sm font-medium">Markaz Campus, Athavanadu</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex space-x-6 lg:space-x-8 items-center">
+                    <a href="#home" class="hover:text-gold-400 transition-colors font-medium">Home</a>
+                    <a href="#about" class="hover:text-gold-400 transition-colors font-medium">About</a>
+                    <a href="#courses" class="hover:text-gold-400 transition-colors font-medium">Courses</a>
+                    <a href="#admissions" class="hover:text-gold-400 transition-colors font-medium">Admissions</a>
+                    <a href="#downloads" class="hover:text-gold-400 transition-colors font-medium">Downloads</a>
+                    <a href="#contact" class="px-5 py-2 bg-gold-500 text-navy-900 rounded-full font-bold hover:bg-gold-400 transition-colors">Contact Us</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-white hover:text-gold-400 focus:outline-none p-2" aria-label="Toggle Menu">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-navy-800 border-t border-gray-700 absolute w-full left-0">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 shadow-lg">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-navy-900 hover:text-gold-400">Home</a>
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-navy-900 hover:text-gold-400">About</a>
+                <a href="#courses" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-navy-900 hover:text-gold-400">Courses</a>
+                <a href="#admissions" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-navy-900 hover:text-gold-400">Admissions</a>
+                <a href="#downloads" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-navy-900 hover:text-gold-400">Downloads</a>
+                <a href="#contact" class="block px-3 py-2 mt-4 text-center rounded-md text-base font-bold bg-gold-500 text-navy-900 hover:bg-gold-400">Contact Us</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- Hero Section -->
+        <section id="home" class="relative bg-navy-900 h-[80vh] min-h-[500px] flex items-center">
+            <!-- Background Image Placeholder (Replace URL with actual campus image) -->
+            <div class="absolute inset-0 w-full h-full object-cover">
+                <img src="https://placehold.co/1920x1080/1e293b/ffffff?text=College+Campus+View" alt="KKHM Campus" class="w-full h-full object-cover opacity-60">
+            </div>
+            <!-- Overlay -->
+            <div class="absolute inset-0 hero-overlay"></div>
+
+            <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-center md:text-left">
+                <span class="inline-block py-1 px-3 rounded-full bg-gold-500/20 text-gold-400 font-medium text-sm mb-4 border border-gold-500/30 backdrop-blur-sm">CIC Affiliation No: 01 | Exclusive Boys Campus</span>
+                <h2 class="text-4xl sm:text-5xl md:text-6xl font-serif font-bold text-white mb-6 leading-tight">
+                    Pioneering Religious & <br class="hidden md:block">
+                    <span class="text-gold-400">Material Synthesis</span>
+                </h2>
+                <p class="mt-4 text-lg sm:text-xl text-gray-200 mb-10 max-w-2xl mx-auto md:mx-0">
+                    Join KKHM Islamic & Arts College, the very first institution affiliated with the Coordination of Islamic Colleges (CIC). We offer the exclusive Wafy course for boys in a serene academic environment.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <a href="#admissions" class="px-8 py-3.5 border border-transparent text-base font-bold rounded-full text-navy-900 bg-gold-500 hover:bg-gold-400 transition-all shadow-lg hover:shadow-xl text-center">
+                        Apply Now
+                    </a>
+                    <a href="#courses" class="px-8 py-3.5 border-2 border-white text-base font-bold rounded-full text-white bg-transparent hover:bg-white hover:text-navy-900 transition-all text-center">
+                        Explore Courses
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Announcements (Marquee) -->
+        <div class="bg-gold-500 text-navy-900 py-2.5 font-medium text-sm shadow-md border-b-4 border-navy-900 flex items-center">
+            <div class="px-4 shrink-0 flex items-center gap-2 font-bold uppercase bg-navy-900 text-white h-full py-1 rounded ml-4">
+                <i class="fa-solid fa-bell animate-pulse text-gold-400"></i> Latest News
+            </div>
+            <div class="marquee-container flex-grow ml-4">
+                <div class="marquee-content inline-flex gap-8">
+                    <span>🔥 Wafy Entrance: Admissions open for the upcoming academic year.</span>
+                    <span>✨ Apply online through our Admission portal.</span>
+                    <span>📚 Wafy Preparatory, Degree & PG batches starting soon.</span>
+                    <span>🏆 Congratulations to our students for outstanding University results!</span>
+                    <span>🔥 Wafy Entrance: Admissions open for the upcoming academic year.</span> <!-- Repeated for smooth looping -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Why Choose Us / Features -->
+        <section class="py-16 bg-white relative -mt-10 z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 rounded-t-3xl shadow-sm">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-gray-50 p-8 rounded-2xl text-center border border-gray-100 hover:border-gold-300 transition-colors group">
+                    <div class="w-16 h-16 mx-auto bg-navy-900 rounded-full flex items-center justify-center text-gold-400 text-2xl mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-award"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-xl text-navy-900 mb-2">CIC Affiliation #01</h3>
+                    <p class="text-gray-600 text-sm">Proud to be the very first institution affiliated with the Coordination of Islamic Colleges.</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="bg-gray-50 p-8 rounded-2xl text-center border border-gray-100 hover:border-gold-300 transition-colors group">
+                    <div class="w-16 h-16 mx-auto bg-navy-900 rounded-full flex items-center justify-center text-gold-400 text-2xl mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-book-quran"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-xl text-navy-900 mb-2">Wafy Curriculum</h3>
+                    <p class="text-gray-600 text-sm">Comprehensive 8-year program for boys seamlessly blending Islamic theology with university degrees.</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="bg-gray-50 p-8 rounded-2xl text-center border border-gray-100 hover:border-gold-300 transition-colors group">
+                    <div class="w-16 h-16 mx-auto bg-navy-900 rounded-full flex items-center justify-center text-gold-400 text-2xl mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-user-tie"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-xl text-navy-900 mb-2">Expert Faculty</h3>
+                    <p class="text-gray-600 text-sm">Learn from highly qualified educators dedicated to shaping capable scholars and professionals.</p>
+                </div>
+                <!-- Feature 4 -->
+                <div class="bg-gray-50 p-8 rounded-2xl text-center border border-gray-100 hover:border-gold-300 transition-colors group">
+                    <div class="w-16 h-16 mx-auto bg-navy-900 rounded-full flex items-center justify-center text-gold-400 text-2xl mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-microscope"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-xl text-navy-900 mb-2">Modern Facilities</h3>
+                    <p class="text-gray-600 text-sm">Well-equipped academic environment, libraries, and laboratories for practical learning.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col lg:flex-row items-center gap-12">
+                    <div class="lg:w-1/2">
+                        <div class="relative">
+                            <img src="https://placehold.co/800x600/cbd5e1/475569?text=College+Building" alt="College History" class="rounded-2xl shadow-xl">
+                            <div class="absolute -bottom-6 -right-6 bg-navy-900 text-white p-6 rounded-xl shadow-lg hidden md:block">
+                                <p class="text-4xl font-serif font-bold text-gold-400">No. 01</p>
+                                <p class="text-sm font-medium">CIC Affiliated Institution</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2">
+                        <h4 class="text-gold-500 font-bold uppercase tracking-wider text-sm mb-2">About Our Institution</h4>
+                        <h2 class="text-3xl md:text-4xl font-serif font-bold text-navy-900 mb-6">Pioneers of the Wafy Vision</h2>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            KKHM Islamic & Arts College, situated in the serene Markaz Campus, Athavanadu, is a premier educational institution exclusively for boys. We hold a historic position as the <strong>very first college affiliated with the Coordination of Islamic Colleges (CIC)</strong>, proudly bearing <strong>Affiliation Number 01</strong>.
+                        </p>
+                        <p class="text-gray-600 mb-8 leading-relaxed">
+                            As a center of religious-material synthesis, we offer the prestigious <strong>Wafy course</strong>. Our mission is to nurture students into responsible scholars and professionals by providing a well-rounded 8-year curriculum that blends advanced Islamic studies with recognized university degrees.
+                        </p>
+                        
+                        <!-- Principal's Message Box -->
+                        <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-gold-500 flex gap-4 items-start">
+                            <img src="https://placehold.co/150x150/cbd5e1/475569?text=Principal" alt="Principal" class="w-16 h-16 rounded-full object-cover">
+                            <div>
+                                <h4 class="font-bold text-navy-900">Principal's Message</h4>
+                                <p class="text-sm text-gray-600 italic mt-2">"Education is not just about academic success, but about building character. We welcome you to experience transformative learning at KKHM, where tradition meets modern academia."</p>
+                                <p class="text-xs font-bold text-gray-500 mt-2">- Dr. [Principal Name]</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Courses Section -->
+        <section id="courses" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h4 class="text-gold-500 font-bold uppercase tracking-wider text-sm mb-2">The Wafy Curriculum</h4>
+                    <h2 class="text-3xl md:text-4xl font-serif font-bold text-navy-900">An 8-Year Comprehensive Program</h2>
+                    <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Our unique curriculum for boys is divided into three major phases, seamlessly integrating Islamic theology with secular academic degrees.</p>
+                    <div class="w-24 h-1 bg-gold-500 mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <!-- Stage 1: Wafy Preparatory -->
+                <div class="mb-12">
+                    <div class="flex items-center gap-4 mb-6 border-b-2 border-gray-100 pb-2">
+                        <div class="w-10 h-10 rounded-lg bg-navy-900 text-gold-500 flex items-center justify-center font-bold text-xl shrink-0 shadow-md">1</div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-navy-900 leading-tight">Wafy Preparatory (First 2 Years)</h3>
+                            <p class="text-sm text-gray-500">Studied alongside Plus Two (Higher Secondary)</p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="course-card bg-gray-50 border border-gray-200 rounded-xl overflow-hidden">
+                            <div class="h-32 bg-navy-900 p-6 flex flex-col justify-end relative">
+                                <i class="fa-solid fa-laptop-code absolute top-4 right-4 text-4xl text-white/20"></i>
+                                <h4 class="text-white font-bold text-xl z-10">Computer Science</h4>
+                            </div>
+                            <div class="p-6">
+                                <p class="text-gray-600 text-sm">Combines foundational Wafy Islamic studies with Higher Secondary Physics, Chemistry, Mathematics, and Computer Science.</p>
+                            </div>
+                        </div>
+                        <div class="course-card bg-gray-50 border border-gray-200 rounded-xl overflow-hidden">
+                            <div class="h-32 bg-navy-800 p-6 flex flex-col justify-end relative">
+                                <i class="fa-solid fa-dna absolute top-4 right-4 text-4xl text-white/20"></i>
+                                <h4 class="text-white font-bold text-xl z-10">Biology Science</h4>
+                            </div>
+                            <div class="p-6">
+                                <p class="text-gray-600 text-sm">Combines foundational Wafy Islamic studies with Higher Secondary Physics, Chemistry, Botany, and Zoology.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stage 2: Wafy Degree -->
+                <div class="mb-12">
+                    <div class="flex items-center gap-4 mb-6 border-b-2 border-gray-100 pb-2">
+                        <div class="w-10 h-10 rounded-lg bg-navy-900 text-gold-500 flex items-center justify-center font-bold text-xl shrink-0 shadow-md">2</div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-navy-900 leading-tight">Wafy Degree (Next 4 Years)</h3>
+                            <p class="text-sm text-gray-500">Studied alongside University Degree Programs</p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <!-- Degree 1 -->
+                        <div class="course-card bg-gray-50 border border-gray-200 rounded-xl overflow-hidden p-6 flex items-start gap-4">
+                            <div class="w-12 h-12 bg-navy-100 rounded-lg flex items-center justify-center text-navy-900 shrink-0">
+                                <i class="fa-solid fa-atom text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-navy-900 text-lg mb-1">B.Sc Physics</h4>
+                                <p class="text-xs font-semibold text-gold-600 mb-2">+ Wafy Degree</p>
+                                <p class="text-sm text-gray-600">Explore the fundamental principles of the universe alongside advanced theology.</p>
+                            </div>
+                        </div>
+                        <!-- Degree 2 -->
+                        <div class="course-card bg-gray-50 border border-gray-200 rounded-xl overflow-hidden p-6 flex items-start gap-4">
+                            <div class="w-12 h-12 bg-navy-100 rounded-lg flex items-center justify-center text-navy-900 shrink-0">
+                                <i class="fa-solid fa-flask text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-navy-900 text-lg mb-1">B.Sc Chemistry</h4>
+                                <p class="text-xs font-semibold text-gold-600 mb-2">+ Wafy Degree</p>
+                                <p class="text-sm text-gray-600">In-depth study of chemical processes integrated with Islamic jurisprudence.</p>
+                            </div>
+                        </div>
+                        <!-- Degree 3 -->
+                        <div class="course-card bg-gray-50 border border-gray-200 rounded-xl overflow-hidden p-6 flex items-start gap-4">
+                            <div class="w-12 h-12 bg-navy-100 rounded-lg flex items-center justify-center text-navy-900 shrink-0">
+                                <i class="fa-solid fa-brain text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-navy-900 text-lg mb-1">B.Sc Psychology</h4>
+                                <p class="text-xs font-semibold text-gold-600 mb-2">+ Wafy Degree</p>
+                                <p class="text-sm text-gray-600">Understand human mind and behavior through scientific and moral perspectives.</p>
+                            </div>
+                        </div>
+                        <!-- Degree 4 -->
+                        <div class="course-card bg-gray-50 border border-gray-200 rounded-xl overflow-hidden p-6 flex items-start gap-4">
+                            <div class="w-12 h-12 bg-navy-100 rounded-lg flex items-center justify-center text-navy-900 shrink-0">
+                                <i class="fa-solid fa-book text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-navy-900 text-lg mb-1">B.A English</h4>
+                                <p class="text-xs font-semibold text-gold-600 mb-2">+ Wafy Degree</p>
+                                <p class="text-sm text-gray-600">Dive into literature and language arts combined with Islamic philosophy.</p>
+                            </div>
+                        </div>
+                        <!-- Degree 5 -->
+                        <div class="course-card bg-gray-50 border border-gray-200 rounded-xl overflow-hidden p-6 flex items-start gap-4">
+                            <div class="w-12 h-12 bg-navy-100 rounded-lg flex items-center justify-center text-navy-900 shrink-0">
+                                <i class="fa-solid fa-users text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-navy-900 text-lg mb-1">B.A Sociology</h4>
+                                <p class="text-xs font-semibold text-gold-600 mb-2">+ Wafy Degree</p>
+                                <p class="text-sm text-gray-600">Study of society and social institutions grounded in ethical frameworks.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stage 3: Wafy PG -->
+                <div>
+                    <div class="flex items-center gap-4 mb-6 border-b-2 border-gray-100 pb-2">
+                        <div class="w-10 h-10 rounded-lg bg-navy-900 text-gold-500 flex items-center justify-center font-bold text-xl shrink-0 shadow-md">3</div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-navy-900 leading-tight">Wafy PG (Final 2 Years)</h3>
+                            <p class="text-sm text-gray-500">Post Graduation in Islamic Studies</p>
+                        </div>
+                    </div>
+                    <div class="course-card bg-gradient-to-br from-navy-900 to-navy-800 text-white border border-gray-200 rounded-xl overflow-hidden p-8 relative">
+                        <i class="fa-solid fa-mosque absolute bottom-[-20px] right-[-20px] text-9xl text-white/5"></i>
+                        <div class="relative z-10 max-w-2xl">
+                            <h4 class="font-serif font-bold text-2xl mb-3 text-gold-400">Post Graduation Specializations</h4>
+                            <p class="text-gray-300 leading-relaxed">
+                                The culmination of the 8-year Wafy course involves intensive 2-year postgraduate studies. Students delve deep into specialized departments such as Quran Interpretation, Hadith, Jurisprudence, Islamic History, and Arabic Literature, equipping them to become authoritative scholars and thinkers.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Admissions Section -->
+        <section id="admissions" class="py-20 bg-navy-900 text-white relative">
+            <div class="absolute inset-0 opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'#ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="bg-white/10 backdrop-blur-lg rounded-3xl p-8 md:p-12 border border-white/20">
+                    <div class="text-center mb-10">
+                        <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-4">Admissions Open</h2>
+                        <p class="text-gray-300 max-w-2xl mx-auto">Take the first step towards a bright future. Review our eligibility criteria and apply online today.</p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-10">
+                        <!-- Eligibility & Procedure -->
+                        <div>
+                            <h3 class="text-xl font-bold text-gold-400 mb-4 border-b border-white/20 pb-2"><i class="fa-solid fa-list-check mr-2"></i> Eligibility & Procedure</h3>
+                            <ul class="space-y-4 text-gray-200">
+                                <li class="flex items-start gap-3">
+                                    <i class="fa-solid fa-check text-gold-500 mt-1"></i>
+                                    <span><strong>For Wafy Preparatory (+2):</strong> Boys who have passed SSLC/10th standard or equivalent and clear the CIC Wafy Entrance Examination.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fa-solid fa-check text-gold-500 mt-1"></i>
+                                    <span><strong>For Wafy Degree & PG:</strong> Continuation requires successful completion of the preceding Wafy phases and relevant secular examinations.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fa-solid fa-check text-gold-500 mt-1"></i>
+                                    <span><strong>Procedure:</strong> Apply through the official CIC Admission portal, clear the entrance test, and complete the enrollment process at our campus.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <!-- CTA Box -->
+                        <div class="bg-navy-800 rounded-xl p-8 text-center flex flex-col justify-center items-center border border-navy-700 shadow-inner">
+                            <i class="fa-brands fa-wpforms text-5xl text-gold-500 mb-4"></i>
+                            <h3 class="text-xl font-bold mb-2">Apply Online Now</h3>
+                            <p class="text-sm text-gray-400 mb-6">Click the button below to fill out the application via Google Forms.</p>
+                            <!-- Replace '#' with actual Form Link -->
+                            <a href="https://wafyonline.com/" target="_blank" class="w-full sm:w-auto px-8 py-4 bg-gold-500 text-navy-900 font-bold rounded-lg hover:bg-gold-400 transition-colors shadow-lg flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-external-link-alt"></i> Go to Application Form
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h4 class="text-gold-500 font-bold uppercase tracking-wider text-sm mb-2">Campus Life</h4>
+                    <h2 class="text-3xl md:text-4xl font-serif font-bold text-navy-900">Photo Gallery</h2>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    <!-- Gallery Images (Placeholders) -->
+                    <div class="aspect-square overflow-hidden rounded-lg shadow-sm group">
+                        <img src="https://placehold.co/400x400/94a3b8/ffffff?text=Event+1" alt="Gallery" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="aspect-square overflow-hidden rounded-lg shadow-sm group">
+                        <img src="https://placehold.co/400x400/64748b/ffffff?text=Classroom" alt="Gallery" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="aspect-square overflow-hidden rounded-lg shadow-sm group">
+                        <img src="https://placehold.co/400x400/475569/ffffff?text=Library" alt="Gallery" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="aspect-square overflow-hidden rounded-lg shadow-sm group">
+                        <img src="https://placehold.co/400x400/334155/ffffff?text=Sports" alt="Gallery" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Downloads Section -->
+        <section id="downloads" class="py-16 bg-white border-t border-gray-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-2xl font-serif font-bold text-navy-900 mb-8"><i class="fa-solid fa-download text-gold-500 mr-2"></i> Important Downloads</h2>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="#" class="inline-flex items-center gap-2 px-6 py-3 bg-gray-100 hover:bg-gray-200 text-navy-900 font-medium rounded-lg transition-colors">
+                        <i class="fa-regular fa-file-pdf text-red-500"></i> College Brochure
+                    </a>
+                    <a href="#" class="inline-flex items-center gap-2 px-6 py-3 bg-gray-100 hover:bg-gray-200 text-navy-900 font-medium rounded-lg transition-colors">
+                        <i class="fa-regular fa-file-pdf text-red-500"></i> Fee Structure
+                    </a>
+                    <a href="#" class="inline-flex items-center gap-2 px-6 py-3 bg-gray-100 hover:bg-gray-200 text-navy-900 font-medium rounded-lg transition-colors">
+                        <i class="fa-regular fa-file-lines text-blue-500"></i> Academic Calendar
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer id="contact" class="bg-navy-900 text-white pt-16 pb-8 border-t-4 border-gold-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
+                <!-- About Column -->
+                <div>
+                    <h3 class="font-serif font-bold text-xl mb-4 text-gold-400">KKHM Islamic & Arts College</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        The first institution (Affiliation No. 01) under the Coordination of Islamic Colleges (CIC). We proudly offer the Wafy course for boys, a perfect synthesis of religious and material education to shape the leaders of tomorrow.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/share/1DeXtAhmzc/" target="_blank" aria-label="Facebook" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-gold-500 hover:text-navy-900 transition-colors">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/kkhmvalanchery?igsi=cHNzYzE1dXZ1bGE3" target="_blank" aria-label="Instagram" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-gold-500 hover:text-navy-900 transition-colors">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://youtube.com/@kkhmislamicandartscollege?si=fJHKebjYMw58Ntox" target="_blank" aria-label="YouTube" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-gold-500 hover:text-navy-900 transition-colors">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links Column -->
+                <div>
+                    <h3 class="font-bold text-lg mb-4 text-white">Quick Links</h3>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="#home" class="hover:text-gold-400 transition-colors"><i class="fa-solid fa-angle-right mr-2 text-gold-500"></i> Home</a></li>
+                        <li><a href="#about" class="hover:text-gold-400 transition-colors"><i class="fa-solid fa-angle-right mr-2 text-gold-500"></i> About Us</a></li>
+                        <li><a href="#courses" class="hover:text-gold-400 transition-colors"><i class="fa-solid fa-angle-right mr-2 text-gold-500"></i> Departments & Courses</a></li>
+                        <li><a href="#admissions" class="hover:text-gold-400 transition-colors"><i class="fa-solid fa-angle-right mr-2 text-gold-500"></i> Admission</a></li>
+                        <li><a href="#gallery" class="hover:text-gold-400 transition-colors"><i class="fa-solid fa-angle-right mr-2 text-gold-500"></i> Gallery</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Column -->
+                <div>
+                    <h3 class="font-bold text-lg mb-4 text-white">Contact Us</h3>
+                    <ul class="space-y-4 text-gray-400 text-sm">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot mt-1 text-gold-500"></i>
+                            <span>Markaz Campus, Markazu Tharbiyyathil Islamiyya, <br> Athavanadu, Karthala (PO), <br> Malappuram, Kerala, India - 679571</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-phone text-gold-500"></i>
+                            <a href="tel:+919633090637" class="hover:text-white">+91 9633090637</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-envelope text-gold-500"></i>
+                            <a href="mailto:kkhmiac@gmail.com" class="hover:text-white">kkhmiac@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 pt-8 text-center text-gray-500 text-sm flex flex-col md:flex-row justify-between items-center gap-4">
+                <p>&copy; 2026 KKHM ISLAMIC & ARTS COLLEGE. All Rights Reserved.</p>
+                <p>Designed for <span class="text-gold-400">Excellence</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            const icon = btn.querySelector('i');
+
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+                // Change icon between bars and xmark
+                if(menu.classList.contains('hidden')){
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                } else {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-xmark');
+                }
+            });
+
+            // Close mobile menu when clicking a link
+            const menuLinks = menu.querySelectorAll('a');
+            menuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    menu.classList.add('hidden');
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
