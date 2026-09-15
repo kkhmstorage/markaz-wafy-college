@@ -59,9 +59,9 @@
             100% { transform: translateX(-100%); }
         }
 
-        /* Hero Image Overlay */
+        /* Hero Image Overlay - Adjusted for 90% Visibility */
         .hero-overlay {
-            background: linear-gradient(to right, rgba(11, 22, 44, 0.9), rgba(11, 22, 44, 0.6));
+            background: linear-gradient(to right, rgba(11, 22, 44, 0.6), rgba(11, 22, 44, 0.2));
         }
         
         /* Card Hover Effects */
@@ -91,8 +91,8 @@
             <div class="flex justify-between items-center h-20">
                 <!-- Logo & College Name -->
                 <div class="flex items-center gap-3">
-                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-navy-900 font-bold text-xl border-2 border-gold-500 shadow-sm">
-                        <i class="fa-solid fa-graduation-cap"></i>
+                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center border-2 border-gold-500 shadow-sm overflow-hidden">
+                        <img src="logo.png" alt="KKHM Logo" class="w-full h-full object-contain p-0.5">
                     </div>
                     <div>
                         <h1 class="font-serif font-bold text-lg sm:text-xl md:text-2xl tracking-wide leading-tight">KKHM ISLAMIC & ARTS COLLEGE</h1>
@@ -136,10 +136,11 @@
 
     <main class="flex-grow">
         <!-- Hero Section -->
-        <section id="home" class="relative bg-navy-900 h-[80vh] min-h-[500px] flex items-center">
-            <!-- Background Image -->
+        <section id="home" class="relative bg-navy-900 h-[80vh] min-h-[500px] flex items-center bg-black">
+            <!-- Background Image Slideshow -->
             <div class="absolute inset-0 w-full h-full">
-                <img src="hero-bg.jpeg.jpeg" alt="KKHM Campus" class="w-full h-full object-cover opacity-70">
+                <!-- Added ID and transition for smooth slideshow -->
+                <img id="hero-bg-img" src="bg1.jpg" alt="KKHM Campus" class="w-full h-full object-cover opacity-90 transition-opacity duration-1000">
                 <!-- Overlay -->
                 <div class="absolute inset-0 hero-overlay"></div>
             </div>
@@ -150,14 +151,14 @@
                     Pioneering Religious & <br class="hidden md:block">
                     <span class="text-gold-400">Material Synthesis</span>
                 </h2>
-                <p class="mt-4 text-lg sm:text-xl text-gray-200 mb-10 max-w-2xl mx-auto md:mx-0">
+                <p class="mt-4 text-lg sm:text-xl text-gray-200 mb-10 max-w-2xl mx-auto md:mx-0 font-medium shadow-sm">
                     Join KKHM Islamic & Arts College, the very first institution affiliated with the Coordination of Islamic Colleges (CIC). We offer the exclusive Wafy course for boys in a serene academic environment.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                     <a href="#admissions" class="px-8 py-3.5 border border-transparent text-base font-bold rounded-full text-navy-900 bg-gold-500 hover:bg-gold-400 transition-all shadow-lg hover:shadow-xl text-center">
                         Apply Now
                     </a>
-                    <a href="#courses" class="px-8 py-3.5 border-2 border-white text-base font-bold rounded-full text-white bg-transparent hover:bg-white hover:text-navy-900 transition-all text-center">
+                    <a href="#courses" class="px-8 py-3.5 border-2 border-white text-base font-bold rounded-full text-white bg-black/30 backdrop-blur-sm hover:bg-white hover:text-navy-900 transition-all text-center">
                         Explore Courses
                     </a>
                 </div>
@@ -220,7 +221,7 @@
                 <div class="flex flex-col lg:flex-row items-center gap-12">
                     <div class="lg:w-1/2">
                         <div class="relative">
-                            <img src="hero-bg.jpeg.jpeg" alt="College History" class="rounded-2xl shadow-xl w-full h-auto">
+                            <img src="bg4.jpg" alt="College History" class="rounded-2xl shadow-xl w-full h-auto">
                             <div class="absolute -bottom-6 -right-6 bg-navy-900 text-white p-6 rounded-xl shadow-lg hidden md:block">
                                 <p class="text-4xl font-serif font-bold text-gold-400">No. 01</p>
                                 <p class="text-sm font-medium">CIC Affiliated Institution</p>
@@ -459,7 +460,7 @@
         </section>
 
         <!-- YouTube Video & Gallery Section -->
-        <section id="gallery" class="py-20 bg-white">
+        <section id="gallery" class="py-20 bg-white border-t border-gray-100">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-12">
                     <h4 class="text-gold-500 font-bold uppercase tracking-wider text-sm mb-2">Campus Highlights</h4>
@@ -467,22 +468,21 @@
                     <div class="w-24 h-1 bg-gold-500 mx-auto mt-4 rounded-full"></div>
                 </div>
                 
+                <!-- Gallery Grid -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     
-                    <!-- Event 1: YouTube Video -->
+                    <!-- Event 01: YouTube Video -->
                     <div class="bg-gray-50 p-4 rounded-2xl shadow-sm border border-gray-200 flex flex-col items-center hover:border-gold-300 transition-colors">
                         <h3 class="font-serif font-bold text-xl text-navy-900 mb-4 w-full text-center border-b border-gray-300 pb-2">Event 01</h3>
-                        <div class="w-full aspect-video rounded-lg overflow-hidden bg-black">
-                            <!-- Autoplay & Muted enabled -->
+                        <div class="w-full aspect-video rounded-lg overflow-hidden bg-black shadow-inner">
                             <iframe class="w-full h-full" src="https://www.youtube.com/embed/SRFdX2kSG40?autoplay=1&mute=1&loop=1&playlist=SRFdX2kSG40" title="Event Video 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                     </div>
                     
-                    <!-- Event 2: YouTube Video -->
+                    <!-- Event 02: YouTube Video -->
                     <div class="bg-gray-50 p-4 rounded-2xl shadow-sm border border-gray-200 flex flex-col items-center hover:border-gold-300 transition-colors">
                         <h3 class="font-serif font-bold text-xl text-navy-900 mb-4 w-full text-center border-b border-gray-300 pb-2">Event 02</h3>
-                        <div class="w-full aspect-video rounded-lg overflow-hidden bg-black">
-                            <!-- Autoplay & Muted enabled -->
+                        <div class="w-full aspect-video rounded-lg overflow-hidden bg-black shadow-inner">
                             <iframe class="w-full h-full" src="https://www.youtube.com/embed/kR3zkCe58_E?autoplay=1&mute=1&loop=1&playlist=kR3zkCe58_E" title="Event Video 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                     </div>
@@ -490,32 +490,44 @@
                     <!-- Placeholder 1: Campus -->
                     <div class="bg-gray-50 p-4 rounded-2xl shadow-sm border border-gray-200 flex flex-col items-center hover:border-gold-300 transition-colors">
                         <h3 class="font-serif font-bold text-xl text-navy-900 mb-4 w-full text-center border-b border-gray-300 pb-2">Campus</h3>
-                        <div class="w-full aspect-video rounded-lg overflow-hidden relative group cursor-not-allowed">
-                            <img src="https://placehold.co/600x338/cbd5e1/475569?text=Coming+Soon..." alt="Campus Blank" class="w-full h-full object-cover opacity-70">
+                        <div class="w-full aspect-video rounded-lg overflow-hidden relative bg-gray-200 flex items-center justify-center border-2 border-dashed border-gray-300">
+                            <div class="text-center text-gray-400">
+                                <i class="fa-regular fa-image text-4xl mb-2"></i>
+                                <p class="text-sm font-medium">Coming Soon</p>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Placeholder 2: Sports -->
                     <div class="bg-gray-50 p-4 rounded-2xl shadow-sm border border-gray-200 flex flex-col items-center hover:border-gold-300 transition-colors">
                         <h3 class="font-serif font-bold text-xl text-navy-900 mb-4 w-full text-center border-b border-gray-300 pb-2">Sports</h3>
-                        <div class="w-full aspect-video rounded-lg overflow-hidden relative group cursor-not-allowed">
-                            <img src="https://placehold.co/600x338/cbd5e1/475569?text=Coming+Soon..." alt="Sports Blank" class="w-full h-full object-cover opacity-70">
+                        <div class="w-full aspect-video rounded-lg overflow-hidden relative bg-gray-200 flex items-center justify-center border-2 border-dashed border-gray-300">
+                            <div class="text-center text-gray-400">
+                                <i class="fa-solid fa-volleyball text-4xl mb-2"></i>
+                                <p class="text-sm font-medium">Coming Soon</p>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Placeholder 3: Library -->
                     <div class="bg-gray-50 p-4 rounded-2xl shadow-sm border border-gray-200 flex flex-col items-center hover:border-gold-300 transition-colors">
                         <h3 class="font-serif font-bold text-xl text-navy-900 mb-4 w-full text-center border-b border-gray-300 pb-2">Library</h3>
-                        <div class="w-full aspect-video rounded-lg overflow-hidden relative group cursor-not-allowed">
-                            <img src="https://placehold.co/600x338/cbd5e1/475569?text=Coming+Soon..." alt="Library Blank" class="w-full h-full object-cover opacity-70">
+                        <div class="w-full aspect-video rounded-lg overflow-hidden relative bg-gray-200 flex items-center justify-center border-2 border-dashed border-gray-300">
+                            <div class="text-center text-gray-400">
+                                <i class="fa-solid fa-book-open-reader text-4xl mb-2"></i>
+                                <p class="text-sm font-medium">Coming Soon</p>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Placeholder 4: Classroom -->
                     <div class="bg-gray-50 p-4 rounded-2xl shadow-sm border border-gray-200 flex flex-col items-center hover:border-gold-300 transition-colors">
                         <h3 class="font-serif font-bold text-xl text-navy-900 mb-4 w-full text-center border-b border-gray-300 pb-2">Classroom</h3>
-                        <div class="w-full aspect-video rounded-lg overflow-hidden relative group cursor-not-allowed">
-                            <img src="https://placehold.co/600x338/cbd5e1/475569?text=Coming+Soon..." alt="Classroom Blank" class="w-full h-full object-cover opacity-70">
+                        <div class="w-full aspect-video rounded-lg overflow-hidden relative bg-gray-200 flex items-center justify-center border-2 border-dashed border-gray-300">
+                            <div class="text-center text-gray-400">
+                                <i class="fa-solid fa-chalkboard-user text-4xl mb-2"></i>
+                                <p class="text-sm font-medium">Coming Soon</p>
+                            </div>
                         </div>
                     </div>
 
@@ -693,6 +705,28 @@
                 rightBtn.addEventListener('click', () => {
                     carousel.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
                 });
+            }
+        });
+
+        // Hero Background Slideshow
+        document.addEventListener('DOMContentLoaded', () => {
+            const bgImage = document.getElementById('hero-bg-img');
+            if(bgImage) {
+                // Array matching exactly with uploaded filenames
+                const images = ['bg1.jpg', 'bg2.jpeg', 'bg3.jpeg', 'bg4.jpg', 'bg5.jpg'];
+                let currentIndex = 0;
+
+                setInterval(() => {
+                    // Fade out current image
+                    bgImage.style.opacity = '0'; 
+                    
+                    // Wait half a second for fade out, then swap image and fade back in
+                    setTimeout(() => {
+                        currentIndex = (currentIndex + 1) % images.length;
+                        bgImage.src = images[currentIndex];
+                        bgImage.style.opacity = '0.9'; // Fade back in to 90%
+                    }, 500); 
+                }, 10000); // 10 seconds per slide
             }
         });
     </script>
