@@ -61,7 +61,7 @@
 
         /* Hero Image Overlay - Adjusted for 90% Visibility */
         .hero-overlay {
-            background: linear-gradient(to right, rgba(11, 22, 44, 0.6), rgba(11, 22, 44, 0.2));
+            background: linear-gradient(to right, rgba(11, 22, 44, 0.3), rgba(11, 22, 44, 0.1));
         }
         
         /* Card Hover Effects */
@@ -92,7 +92,7 @@
                 <!-- Logo & College Name -->
                 <div class="flex items-center gap-3">
                     <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center border-2 border-gold-500 shadow-sm overflow-hidden">
-                        <img src="logo.png" alt="KKHM Logo" class="w-full h-full object-contain p-0.5">
+                        <img src="logo.PNG" alt="KKHM Logo" class="w-full h-full object-contain p-0.5">
                     </div>
                     <div>
                         <h1 class="font-serif font-bold text-lg sm:text-xl md:text-2xl tracking-wide leading-tight">KKHM ISLAMIC & ARTS COLLEGE</h1>
@@ -139,22 +139,20 @@
         <section id="home" class="relative bg-navy-900 h-[80vh] min-h-[500px] flex items-center bg-black">
             <!-- Background Image Slideshow -->
             <div class="absolute inset-0 w-full h-full">
-                <!-- Added ID and transition for smooth slideshow -->
                 <img id="hero-bg-img" src="bg1.jpg" alt="KKHM Campus" class="w-full h-full object-cover opacity-90 transition-opacity duration-1000">
-                <!-- Overlay -->
                 <div class="absolute inset-0 hero-overlay"></div>
             </div>
 
             <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-center md:text-left">
                 <span class="inline-block py-1 px-3 rounded-full bg-gold-500/20 text-gold-400 font-medium text-sm mb-4 border border-gold-500/30 backdrop-blur-sm">CIC Affiliation No: 01 | Exclusive Boys College</span>                
-                <h2 class="text-4xl sm:text-5xl md:text-6xl font-serif font-bold text-white mb-6 leading-tight">
+                <h2 class="text-4xl sm:text-5xl md:text-6xl font-serif font-bold text-white mb-6 leading-tight drop-shadow-md">
                     Pioneering Religious & <br class="hidden md:block">
-                    <span class="text-gold-400">Material Synthesis</span>
+                    <span class="text-gold-400 drop-shadow-md">Material Synthesis</span>
                 </h2>
-                <p class="mt-4 text-lg sm:text-xl text-gray-200 mb-10 max-w-2xl mx-auto md:mx-0 font-medium shadow-sm">
+                <p class="mt-4 text-lg sm:text-xl text-white mb-10 max-w-2xl mx-auto md:mx-0 font-medium drop-shadow-lg bg-black/20 p-2 rounded-lg backdrop-blur-sm inline-block md:block md:bg-transparent md:p-0 md:backdrop-blur-none">
                     Join KKHM Islamic & Arts College, the very first institution affiliated with the Coordination of Islamic Colleges (CIC). We offer the exclusive Wafy course for boys in a serene academic environment.
                 </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mt-4">
                     <a href="#admissions" class="px-8 py-3.5 border border-transparent text-base font-bold rounded-full text-navy-900 bg-gold-500 hover:bg-gold-400 transition-all shadow-lg hover:shadow-xl text-center">
                         Apply Now
                     </a>
@@ -712,7 +710,7 @@
         document.addEventListener('DOMContentLoaded', () => {
             const bgImage = document.getElementById('hero-bg-img');
             if(bgImage) {
-                // Array matching exactly with uploaded filenames
+                // Array matching exactly with uploaded filenames in exact cases
                 const images = ['bg1.jpg', 'bg2.jpeg', 'bg3.jpeg', 'bg4.jpg', 'bg5.jpg'];
                 let currentIndex = 0;
 
@@ -724,9 +722,9 @@
                     setTimeout(() => {
                         currentIndex = (currentIndex + 1) % images.length;
                         bgImage.src = images[currentIndex];
-                        bgImage.style.opacity = '0.9'; // Fade back in to 90%
+                        bgImage.style.opacity = '0.9'; // Fade back in to 90% visibility
                     }, 500); 
-                }, 3000); // 3 seconds per slide
+                }, 3000); // 3 seconds per slide (changed from 10 seconds)
             }
         });
     </script>
