@@ -207,6 +207,7 @@
                     <a href="#home" class="hover:text-gold-400 transition-colors py-1">Home</a>
                     <a href="#about" class="hover:text-gold-400 transition-colors py-1">About</a>
                     <a href="#courses" class="hover:text-gold-400 transition-colors py-1">Courses</a>
+                    <a href="#events" class="hover:text-gold-400 transition-colors py-1">Events</a>
                     <a href="#achievements" class="hover:text-gold-400 transition-colors py-1">Achievements</a>
                     <a href="#gallery" class="hover:text-gold-400 transition-colors py-1">Campus Life</a>
                     <a href="#admissions" class="hover:text-gold-400 transition-colors py-1">Admissions</a>
@@ -230,6 +231,7 @@
             <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-200 hover:text-gold-400 hover:bg-navy-800">Home</a>
             <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-200 hover:text-gold-400 hover:bg-navy-800">About Us</a>
             <a href="#courses" class="block px-3 py-2 rounded-md text-base font-medium text-gray-200 hover:text-gold-400 hover:bg-navy-800">Courses</a>
+            <a href="#events" class="block px-3 py-2 rounded-md text-base font-medium text-gray-200 hover:text-gold-400 hover:bg-navy-800">Events</a>
             <a href="#achievements" class="block px-3 py-2 rounded-md text-base font-medium text-gray-200 hover:text-gold-400 hover:bg-navy-800">Achievements</a>
             <a href="#gallery" class="block px-3 py-2 rounded-md text-base font-medium text-gray-200 hover:text-gold-400 hover:bg-navy-800">Campus Life</a>
             <a href="#admissions" class="block px-3 py-2 rounded-md text-base font-medium text-gray-200 hover:text-gold-400 hover:bg-navy-800">Admissions</a>
@@ -579,6 +581,49 @@
                     </div>
                 </div>
 
+            </div>
+        </section>
+
+
+        <!-- ============================================================
+             Instagram Events Section  (@kkhmvalanchery)
+             പുതിയ പോസ്റ്ററുകൾ Instagram-ൽ ഇട്ടാൽ മതി — ഇവിടെ തനിയെ വരും.
+             ഒറ്റത്തവണ സജ്ജീകരണം: താഴെയുള്ള script-ലെ INSTAGRAM_FEED_ID-ൽ
+             Behold.so feed ID ഒട്ടിക്കുക. ID ഇല്ലെങ്കിൽ "Follow" കാർഡ് കാണിക്കും.
+             ============================================================ -->
+        <section id="events" class="py-20 bg-white border-t border-gray-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h4 class="text-gold-600 font-bold uppercase tracking-wider text-sm mb-2"><i class="fa-brands fa-instagram"></i> Live from Instagram</h4>
+                    <h2 class="text-3xl md:text-4xl font-serif font-bold text-navy-950">Events &amp; Programs</h2>
+                    <p class="text-gray-600 mt-3 max-w-2xl mx-auto text-sm sm:text-base">The latest events, programs and announcements from KKHM, straight from our Instagram page.</p>
+                    <div class="w-20 h-1 bg-gold-500 mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <!-- Posts are filled in here automatically -->
+                <div id="ig-events-grid" class="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6" aria-live="polite">
+                    <div class="ig-skeleton aspect-square rounded-2xl bg-slate-100 animate-pulse"></div>
+                    <div class="ig-skeleton aspect-square rounded-2xl bg-slate-100 animate-pulse"></div>
+                    <div class="ig-skeleton aspect-square rounded-2xl bg-slate-100 animate-pulse"></div>
+                </div>
+
+                <!-- Shown when the feed is not set up yet or cannot load -->
+                <div id="ig-events-fallback" class="hidden max-w-xl mx-auto text-center bg-gradient-to-br from-navy-950 to-navy-800 text-white rounded-3xl p-8 sm:p-10 shadow-xl">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-2xl flex items-center justify-center text-3xl" style="background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%);">
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-serif font-bold mb-2">See our latest events on Instagram</h3>
+                    <p class="text-gray-300 text-sm mb-6">Programs, celebrations and announcements are posted daily on <span class="text-gold-400 font-semibold">@kkhmvalanchery</span>.</p>
+                    <a href="https://www.instagram.com/kkhmvalanchery" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-7 py-3 bg-gradient-to-r from-gold-500 to-gold-600 text-navy-950 rounded-full font-bold shadow-md hover:from-gold-400 hover:to-gold-500 transition-all">
+                        <i class="fa-brands fa-instagram"></i> Follow @kkhmvalanchery
+                    </a>
+                </div>
+
+                <div id="ig-events-more" class="hidden text-center mt-10">
+                    <a href="https://www.instagram.com/kkhmvalanchery" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-7 py-3 bg-navy-950 text-white rounded-full font-bold shadow-md hover:bg-navy-800 transition-all">
+                        <i class="fa-brands fa-instagram"></i> View all on Instagram
+                    </a>
+                </div>
             </div>
         </section>
 
@@ -1024,6 +1069,7 @@
                         <li><a href="#home" class="hover:text-gold-400 transition-colors">Home Page</a></li>
                         <li><a href="#about" class="hover:text-gold-400 transition-colors">About Institution</a></li>
                         <li><a href="#courses" class="hover:text-gold-400 transition-colors">Wafy Curriculum</a></li>
+                        <li><a href="#events" class="hover:text-gold-400 transition-colors">Events</a></li>
                         <li><a href="#achievements" class="hover:text-gold-400 transition-colors">Achievements</a></li>
                         <li><a href="#gallery" class="hover:text-gold-400 transition-colors">Campus Life</a></li>
                         <li><a href="#admissions" class="hover:text-gold-400 transition-colors">Admissions</a></li>
@@ -1141,6 +1187,78 @@
                     }, 500); 
                 }, 4000); 
             }
+        });
+
+        // ===== Instagram Events Feed =====
+        // ഒറ്റത്തവണ മാത്രം: Behold.so-ൽ നിന്നുള്ള feed ID ഇവിടെ ഒട്ടിക്കുക (ഉദാ: 'zFgp2Jbbk23Ovf1ZUOhq').
+        const INSTAGRAM_FEED_ID = '';
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const grid = document.getElementById('ig-events-grid');
+            const fallback = document.getElementById('ig-events-fallback');
+            const more = document.getElementById('ig-events-more');
+            if (!grid) return;
+
+            const showFallback = () => {
+                grid.classList.add('hidden');
+                fallback.classList.remove('hidden');
+            };
+
+            if (!INSTAGRAM_FEED_ID) { showFallback(); return; }
+
+            fetch('https://feeds.behold.so/' + encodeURIComponent(INSTAGRAM_FEED_ID))
+                .then(r => { if (!r.ok) throw new Error('feed ' + r.status); return r.json(); })
+                .then(data => {
+                    const posts = (Array.isArray(data) ? data : (data.posts || [])).slice(0, 9);
+                    if (!posts.length) { showFallback(); return; }
+                    grid.innerHTML = '';
+                    posts.forEach(post => {
+                        const sizes = post.sizes || {};
+                        const img = (sizes.medium && sizes.medium.mediaUrl) || post.thumbnailUrl || post.mediaUrl;
+                        if (!img) return;
+                        const isVideo = post.mediaType === 'VIDEO';
+                        const isAlbum = post.mediaType === 'CAROUSEL_ALBUM';
+                        const caption = (post.prunedCaption || post.caption || '').trim();
+                        const date = post.timestamp ? new Date(post.timestamp).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' }) : '';
+
+                        const a = document.createElement('a');
+                        a.href = post.permalink || 'https://www.instagram.com/kkhmvalanchery';
+                        a.target = '_blank';
+                        a.rel = 'noopener noreferrer';
+                        a.className = 'group relative block aspect-square rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all bg-navy-950';
+
+                        const im = document.createElement('img');
+                        im.src = img;
+                        im.alt = caption ? caption.slice(0, 120) : 'KKHM event on Instagram';
+                        im.loading = 'lazy';
+                        im.className = 'w-full h-full object-cover group-hover:scale-105 transition-transform duration-500';
+                        a.appendChild(im);
+
+                        if (isVideo || isAlbum) {
+                            const badge = document.createElement('span');
+                            badge.className = 'absolute top-3 right-3 w-8 h-8 rounded-full bg-black/60 text-white flex items-center justify-center text-sm';
+                            badge.innerHTML = isVideo ? '<i class="fa-solid fa-play"></i>' : '<i class="fa-solid fa-clone"></i>';
+                            a.appendChild(badge);
+                        }
+
+                        const overlay = document.createElement('div');
+                        overlay.className = 'absolute inset-0 bg-gradient-to-t from-navy-950/90 via-navy-950/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4 text-white';
+                        const capEl = document.createElement('p');
+                        capEl.className = 'text-xs sm:text-sm line-clamp-3 font-malayalam';
+                        capEl.textContent = caption;
+                        const dateEl = document.createElement('span');
+                        dateEl.className = 'text-[11px] text-gold-400 font-semibold mt-1';
+                        dateEl.textContent = date;
+                        overlay.appendChild(capEl);
+                        overlay.appendChild(dateEl);
+                        a.appendChild(overlay);
+
+                        grid.appendChild(a);
+                    });
+                    if (!grid.children.length) { showFallback(); return; }
+                    more.classList.remove('hidden');
+                })
+                .catch(showFallback);
         });
 
         // Lightbox Modal
